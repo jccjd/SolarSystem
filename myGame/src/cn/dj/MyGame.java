@@ -30,7 +30,7 @@ public class MyGame extends Frame {
         });
     }
     private double x=100,y=100;
-    private boolean left;
+    private boolean left,up;
 
     @Override
     public void paint(Graphics g){
@@ -47,18 +47,31 @@ public class MyGame extends Frame {
         g.fillOval(100,100,100,100);
 
         g.drawImage(img, (int) x, (int) y, null);
+//
+//        if (left) {
+//            x -= 30;
+//
+//        } else {
+//            x += 30;
+//        }
+//        if (x>500-30) {
+//            left = true;
+//        }
+//        if (x<0) {
+//            left = false;
+//        }
 
-        if (left) {
-            x -= 30;
+        if (up) {
+            y -= 3;
 
         } else {
-            x += 30;
+            y += 3;
         }
-        if (x>500-30) {
-            left = true;
+        if (y>500-30) {
+            up = true;
         }
-        if (x<0) {
-            left = false;
+        if (y<30) {
+            up = false;
         }
     }
     //移动图片
