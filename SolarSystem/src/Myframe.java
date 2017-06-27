@@ -24,11 +24,13 @@ public class Myframe extends Frame{
     class PaintThread extends Thread{
         @Override
         public void run() {
-            repaint();
-            try {
-                Thread.sleep(40);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            while (true) {
+                repaint();
+                try {
+                    Thread.sleep(40);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
