@@ -14,6 +14,7 @@ public class Myframe extends Frame {
         setLocation(100,100);
         setVisible(true);
 
+        new PaintThread().start();
         addWindowFocusListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
