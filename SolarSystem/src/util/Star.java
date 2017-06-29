@@ -8,30 +8,46 @@ import java.awt.*;
 public class Star {
     Image image;
     double x,y;
-
+    int width, height;
     public Star() {}
 
-    public void draw(Graphics g) {
+//    public void draw(Graphics g) {
+//
 //        g.drawImage(image,(int)x,(int)y,null);
-        g.setColor(Color.ORANGE);
-        g.fillOval((int)x,(int)y,30,30);
-    }
+//    }
+    public void draw(Graphics g) {
 
-    public Star(Image image,double x,double y) {
+            g.fillOval((int)x,(int)y,width,height);
 
-        this.image = image;
+        }
+
+    public Star(double x,double y, int width, int height) {
         this.x = x;
         this.y = y;
-    }
-    public Star(String imagepath,double x,double y) {
+        this.width = width;
+        this.height = height;
 
-        this.image = GameUtil.getImage(imagepath);
-        this.x = x;
-        this.y = y;
     }
-    public Star(double x,double y) {
 
-        this.x = x;
-        this.y = y;
-    }
+//    public Star(Image image,double x,double y) {
+//
+//        this(image);
+//        this.x = x;
+//        this.y = y;
+//        this.width = (int) x;
+//        this.height= (int) y;
+//    }
+//    public Star(Image image) {
+//
+//        this.image = image;
+////        this.width = image.getWidth(null);
+////        this.height = image.getHeight(null);
+//
+//    }
+//    public Star(String imagepath,double x,double y) {
+//
+//        this(GameUtil.getImage(imagepath),x,y);  //通过this调用另一个构造方法
+//
+//    }
+
 }
